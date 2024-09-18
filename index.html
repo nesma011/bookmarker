@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./5801789.png">
+
+    <title>Bookmarker</title>
+</head>
+
+    <body class="container">
+        <header class="py-2">
+          <div class="book-content">
+            <h1 class="mb-5 text-center mx-auto">Bookmarker</h1>
+           
+           
+        <h2 class="text-center pt-4">
+            <i class="fa-solid fa-bookmark me-2"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark ms-2"></i>
+        </h2>
+        
+            
+      </div>
+
+          
+        
+        </header>
+        <main>
+            <section class="py-4">
+                <form >
+                    <label for="siteName" class="fw-bold">Site Name</label>
+                    <input oninput="validateName()" type="text" id="siteName" placeholder="Bookmark Name" class="form-control mb-4">
+                    <label for="siteUrl" class="fw-bold">Site URL</label>
+                    <input oninput="validateUrl()" type="text" id="siteUrl" placeholder="Website URL" class="form-control mb-4">
+                    <button type="button" onclick="addBookmark()" class="btn m-auto px-5 py-1 my-4 text-white position-relative">Submit</button>
+                </form>
+            </section>
+    
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fs-4 mb-2" id="exampleModalLabel">
+                        <span class="d-inline-block me-2"></span>
+                                  <span class="d-inline-block me-2"></span>
+                                  <span class="d-inline-block me-2"></span>
+                                  <i class="icon"></i>
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModalBtn"></button>
+                    </div>
+                    <div class="modal-body mt-2">
+                      <p class="fw-bold">Site Name or URL is not valid. Please follow the rules below:</p>
+                      <ul class="list-unstyled">
+                        <li><i class="fa-regular fa-circle-right"></i> Site name must contain at least 3 characters.</li>
+                        <li class="mt-2"><i class="fa-regular fa-circle-right"></i> Site URL must be a valid one (must start with http:// or https://).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+    
+            <section class="mt-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data"></tbody>
+                </table>
+            </section>
+        </main>
+    
+    
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+      </script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
